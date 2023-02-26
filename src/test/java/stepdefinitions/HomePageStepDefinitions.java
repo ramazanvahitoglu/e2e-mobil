@@ -28,13 +28,14 @@ public class HomePageStepDefinitions {
     }
     @Then("Adresim kismina emaili gir")
     public void adresim_kismina_emaili_gir() {
+        allpages.email.sendKeys("exemplex632sas@gmail.com");
         try{
+            if (Driver.getAppiumDriver().getPageSource().indexOf("Yes")!=-1)
             allpages.No.click();
         }
         catch (Exception e){
             System.out.println(e);
         }
-        allpages.email.sendKeys("exemplex72328@gmail.com");
         allpages.suivantClick.click();
     }
 
