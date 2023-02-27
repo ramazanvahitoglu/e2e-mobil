@@ -14,36 +14,31 @@ public class Allpages {
     }
 
     @FindBy (xpath = "//button[@id='didomi-notice-agree-button']")
-    //@FindBy (id = "didomi-notice-agree-button")
-    public WebElement sayfayiGec;
+    public WebElement acceptButton;
 
     @FindBy (xpath = "//a[@class='close-btn']")
-    public WebElement No;
+    public WebElement noButton;
 
     @FindBy (xpath = "//span[@class='allfont allfont-perso']")
-    public WebElement profilClick;
+    public WebElement profilMenu;
 
     @FindBy (xpath = "(//ul[@class='menu_level_1']//li/a)[1]")
-    public WebElement monProfil;
+    public WebElement monLabel;
 
     @FindBy (xpath = "//*[@id='email']")
-    //@FindBy (id = "email")
-    public WebElement email;
+    public WebElement emailTextbox;
 
     @FindBy (xpath = "//button[@class='ant-btn atds-btn']")
-    public WebElement suivantClick;
+    public WebElement suivantButton;
 
     @FindBy(xpath = "//input[@id='lastname']")
-    //@FindBy(id = "lastname")
-    public WebElement lastname;
+    public WebElement lastnameTextbox;
 
     @FindBy(xpath = "//input[@id='firstname']")
-    //@FindBy(id = "firstname")
-    public WebElement firstname;
+    public WebElement firstnameTextbox;
 
     @FindBy(xpath = "//input[@id='password']")
-    //@FindBy(id = "password")
-    public WebElement password;
+    public WebElement passwordTextbox;
 
     @FindBy(xpath = "//button[@class='ant-btn atds-btn']")
     public WebElement saveButton;

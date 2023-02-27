@@ -13,9 +13,9 @@ public class HomePageStepDefinitions {
     @Given("Alltricks anasayafa git")
     public void alltricks_anasayfasina_git(){
        Driver.getAppiumDriver().get(ConfigReader.getProperty("Url"));
-        allpages.sayfayiGec.click();
+        allpages.acceptButton.click();
         try{
-            allpages.No.click();
+            allpages.noButton.click();
         }
         catch (Exception e){
             System.out.println(e);
@@ -23,29 +23,29 @@ public class HomePageStepDefinitions {
     }
     @Given("Profil sekmesine geç")
     public void profil_sekmesine_geç() {
-        allpages.profilClick.click();
-        allpages.monProfil.click();
+        allpages.profilMenu.click();
+        allpages.monLabel.click();
     }
     @Then("Adresim kismina emaili gir")
     public void adresim_kismina_emaili_gir() {
-        allpages.email.sendKeys("exemplex456dadasd@gmail.com");
+        allpages.emailTextbox.sendKeys("exemplex456dadasd@gmail.com");
         try{
             if (Driver.getAppiumDriver().getPageSource().indexOf("Yes")!=-1){
-                allpages.No.click();
+                allpages.noButton.click();
             }
         }
         catch (Exception e){
             System.out.println(e);
         }
-        allpages.suivantClick.click();
+        allpages.suivantButton.click();
     }
 
     @Then("Bilgilerini doldur.")
     public void bilgileriniDoldur() {
         ReusableMethods.scrollDownJavascript(0,500);
-        allpages.firstname.sendKeys("gdhgasddgdhjsfsdf");
-        allpages.lastname.sendKeys("dhfhjasdafgsfd");
-        allpages.password.sendKeys("gdfgdasdfgsdfdsf");
+        allpages.lastnameTextbox.sendKeys("gdhgasddgdhjsfsdf");
+        allpages.firstnameTextbox.sendKeys("dhfhjasdafgsfd");
+        allpages.passwordTextbox.sendKeys("gdfgdasdfgsdfdsf");
         allpages.saveButton.click();
     }
 }
