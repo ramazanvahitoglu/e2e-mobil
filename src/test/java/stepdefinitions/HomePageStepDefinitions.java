@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pages.Allpages;
@@ -10,6 +11,12 @@ import utilities.ReusableMethods;
 public class HomePageStepDefinitions {
 
     Allpages allpages=new Allpages();
+    Faker faker=new Faker();
+    String email=faker.internet().emailAddress();
+    String firstname=faker.name().firstName();
+    String lastname=faker.name().lastName();
+    String password=faker.internet().password();
+
     @Given("Alltricks anasayafa git")
     public void alltricks_anasayfasina_git(){
        Driver.getAppiumDriver().get(ConfigReader.getProperty("Url"));
@@ -28,7 +35,7 @@ public class HomePageStepDefinitions {
     }
     @Then("Adresim kismina emaili gir")
     public void adresim_kismina_emaili_gir() {
-        allpages.emailTextbox.sendKeys("exemplex456dadasd@gmail.com");
+        allpages.emailTextbox.sendKeys(email);
         try{
             if (Driver.getAppiumDriver().getPageSource().indexOf("Yes")!=-1){
                 allpages.noButton.click();
@@ -43,9 +50,9 @@ public class HomePageStepDefinitions {
     @Then("Bilgilerini doldur.")
     public void bilgileriniDoldur() {
         ReusableMethods.scrollDownJavascript(0,500);
-        allpages.lastnameTextbox.sendKeys("gdhgasddgdhjsfsdf");
-        allpages.firstnameTextbox.sendKeys("dhfhjasdafgsfd");
-        allpages.passwordTextbox.sendKeys("gdfgdasdfgsdfdsf");
+        allpages.firstnameTextbox.sendKeys(firstname);
+        allpages.lastnameTextbox.sendKeys(lastname);
+        allpages.passwordTextbox.sendKeys(password);
         allpages.saveButton.click();
     }
 }
