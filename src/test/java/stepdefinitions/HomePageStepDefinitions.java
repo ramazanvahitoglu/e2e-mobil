@@ -28,7 +28,7 @@ public class HomePageStepDefinitions {
     }
     @Then("Adresim kismina emaili gir")
     public void adresim_kismina_emaili_gir() {
-        allpages.email.sendKeys("exemplex559832@gmail.com");
+        allpages.email.sendKeys("exemplex456dadasd@gmail.com");
         try{
             if (Driver.getAppiumDriver().getPageSource().indexOf("Yes")!=-1){
                 allpages.No.click();
@@ -43,9 +43,9 @@ public class HomePageStepDefinitions {
     @Then("Bilgilerini doldur.")
     public void bilgileriniDoldur() {
         ReusableMethods.scrollDownJavascript(0,500);
-        allpages.firstname.sendKeys("gdhgdgdhjsfsdf");
-        allpages.lastname.sendKeys("dhfhjfgsfd");
-        allpages.password.sendKeys("gdfgdfgsdfdsf");
+        allpages.firstname.sendKeys("gdhgasddgdhjsfsdf");
+        allpages.lastname.sendKeys("dhfhjasdafgsfd");
+        allpages.password.sendKeys("gdfgdasdfgsdfdsf");
         allpages.saveButton.click();
     }
 }
