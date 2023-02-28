@@ -22,7 +22,9 @@ public class HomePageStepDefinitions {
        Driver.getAppiumDriver().get(ConfigReader.getProperty("Url"));
         allpages.acceptButton.click();
         try{
-            allpages.noButton.click();
+            if (Driver.getAppiumDriver().getPageSource().indexOf("Yes")!=-1){
+                allpages.noButton.click();
+            }
         }
         catch (Exception e){
             System.out.println(e);

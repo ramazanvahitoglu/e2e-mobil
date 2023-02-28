@@ -8,9 +8,9 @@ import utilities.Driver;
 
 import java.time.Duration;
 
-public class Allpages {
+public class Allpages{
     public Allpages(){
-        PageFactory.initElements(new AppiumFieldDecorator(Driver.getAppiumDriver(), Duration.ofSeconds(5)),this);
+        PageFactory.initElements(new AppiumFieldDecorator(Driver.getAppiumDriver(), Duration.ofSeconds(15)),this);
     }
 
     @FindBy (xpath = "//button[@id='didomi-notice-agree-button']")
