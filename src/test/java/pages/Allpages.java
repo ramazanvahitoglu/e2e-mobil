@@ -44,6 +44,15 @@ public class Allpages{
     public WebElement saveButton;
 
     /*
+        @FindBy(xpath = "(//img[@class='circle-thumbnails'])[1]")
+    public WebElement velosImg;
+
+    @FindBy(xpath = "//img[@alt='Alltricks']")
+    public WebElement alltcicksLogo;
+     */
+
+
+    /*
     sürüm farkından dolayı AndroidFindBy olarak tanımlamamız gerekebilir.
     @AndroidFindBy (xpath = "")
     public WebElement ikon2;

@@ -56,5 +56,7 @@ public class HomePageStepDefinitions {
         allpages.lastnameTextbox.sendKeys(lastname);
         allpages.passwordTextbox.sendKeys(password);
         allpages.saveButton.click();
+        //allpages.alltcicksLogo.click();
+        //allpages.velosImg.click();
     }
 }
